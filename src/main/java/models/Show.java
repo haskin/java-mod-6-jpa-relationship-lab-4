@@ -17,7 +17,7 @@ public class Show {
     @GeneratedValue
     private int id;
     private String name;
-    private String day;
+    private String dayOfTheWeek;
     private String season;
     private String genre;
     @OneToMany(mappedBy = "show")
@@ -27,7 +27,7 @@ public class Show {
 
     public Show(String name, String day, String season, String genre, Network network) {
         this.name = name;
-        this.day = day;
+        this.dayOfTheWeek = day;
         this.season = season;
         this.genre = genre;
         this.network = network;

@@ -24,11 +24,11 @@ public class Main {
         Actor actor = new Actor("Brad", "Pitt");
         Network network = new Network("call letter", 5);
         Show show = new Show("Vinland Saga", "Monday", "Fall", "Vikings", network);
+        network.setShows(List.of(show));
         Character character = new Character("Thorfin", "You're dead!", actor, show);
 
         actor.setCharacter(List.of(character));
         show.setCharacters(List.of(character));
-        network.setShows(List.of(show));
 
         entityManager.persist(actor);
         entityManager.persist(show);
